@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Assignment 5 jQueryUI</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+    <!-- jQuery UI style sheet reference. Smoothness is the theme used. -->
+    <link href="css/smoothness/jquery-ui-1.8.23.custom.css" type="text/css" rel="stylesheet">
+	<!-- Normal style sheet used for layout and general formatting. -->
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <!-- HTML5 shim/shiv for HTML5 section element backward compatibility. -->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- jQuery library reference. Latest is always referenced from jQuery's CDN. -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <!-- jQuery UI JavaScript library reference. -->
+    <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+    <!-- jQuery call to the accordion() method. -->
+    <script type="text/javascript" src="js/assignment5.js"></script>
+    <script>
+    	$(document).ready(function() {
+			$("#accordion").accordion(
+				{ 
+					event: "click",
+					collapsible: true 
+				});
+	    });
+	</script>
+</head>
+
+<body>
+    <section>
+    	<div id="panel"></div> 
+        <h1>Angular JS Presentation</h1>       
+        <div id="accordion">
+ 			<h3><a href="#">What is AngularJS?</a></h3>
+			<div>
+				<ol>
+					<li>Java Script for Anglers.</li>
+					<li>An acute angle algorithm.</li>
+					<li>Something to do with both geometry and fishing.</li>
+					<li>A Javascript Model View Controller (MVC) framework.</li>
+				</ol>
+			</div>
+			<h3><a href="#">Who created this and why?</a></h3>
+			<div>
+				<ol>
+					<li>It sprang preformed for the mind of Steve Jobs to take over the world.</li>
+					<li>Bill Gates created it to help computers become self aware.</li>
+					<li>Stephen Hawking’s computer made it because it was bored.</li>
+					<li>It was created by Google engineers to help web developers.</li>
+				</ol>
+			</div>
+			<h3><a href="#">How does it work?</a></h3>
+			<div>
+				<ol>
+					<li>Little gnomes do all the work for pieces of bread.</li>
+					<li>You have to say a magic spell and wave a magic wand.</li>
+					<li>Push the red button.</li>
+					<li>Load the AngularJS source code and bootstrap it using the ng-app directive.</li>
+				</ol>
+			</div>
+						<h3><a href="#">Can you show me how this works?</a></h3>
+			<div>
+				<ol>
+					<li>If you can demonstrate your proficiency in Kabuki theater.</li>
+					<li>If you can explain the ending of “Atame!”</li>
+					<li>If you can recreate the “Chunari Chunari” dance from “Monsoon Wedding”.</li>
+					<li>See the following code page.</li>
+				</ol>
+			</div>
+			
+        </div>
+    </section>
+</body>
+</html>
