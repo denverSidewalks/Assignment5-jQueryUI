@@ -25,12 +25,25 @@ document.addEventListener( "DOMContentLoaded" , init , false ) ;
 
  function stay() {
  
- 	
-   var winObject = window.close( "pop.html", "windowName") ;
+ 		
+ 	   
+  	   var winObject = window.close( "pop.html", "windowName") ;
+  	   
+ 	  /** window.opener.location.reload(true);*/
+
    /**var timer_Reset = window.setTimeout( init , 1000 ) ;*/
 
 
        }
+       
+  function refresh() {
+  	            window.opener.location.href = "index.html"
+  	                        }    
+       
+  function exit() {
+  	
+   window.opener.location.href = "http://www.google.com"
+  }
        
  
   /** (document.getElementById("stay").onclick){
