@@ -5,12 +5,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Popup Window</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+    <!-- jQuery UI style sheet reference. Smoothness is the theme used. -->
+    <link href="css/smoothness/jquery-ui-1.8.23.custom.css" type="text/css" rel="stylesheet">
+	<!-- Normal style sheet used for layout and general formatting. -->
+    <!--<link href="styles.css" type="text/css" rel="stylesheet">-->
+    <!-- HTML5 shim/shiv for HTML5 section element backward compatibility. -->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!-- jQuery library reference. Latest is always referenced from jQuery's CDN. -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <!-- jQuery UI JavaScript library reference. -->
+    <script type="text/javascript" src="js/jquery-ui-1.8.23.custom.min.js"></script>
+    <!-- jQuery call to the accordion() method. -->
+    <script type="text/javascript" src="js/assignment5.js"></script>
 </head>
 
 <body>
 <p>Your Session will expire soon.</p>
 <button>Exit</button>
-<button onclick="resetTimer()" id="stay">Stay</button>
+<input type="button" onclick="stay()" value="Stay">
+
+<!--<button id="stay" onclick="stay()">Stay</button>-->
+<!--onclick="resetTimer()"-->
 </body>
 
 </html>

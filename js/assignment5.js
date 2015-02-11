@@ -10,21 +10,46 @@ function init()
  panel.innerHTML += "<span style='background:black;color:white;margin:2px;'>"+counter+ "</span>" ;
  if ( counter >= 10 ) 
  { 
- /**  window.clearTimeout( timerId ) ; 
-  * 
-  */
- var winObject = window.open( "pop.html", "windowName", "top=200,left=100,width=450,height=100,status" ) ;
+  /**var left = 500 (screen.width/2)-(450/2);*/
+  /**var top = 500 (screen.height/2)-(100/2);*/
+ 
+ var winObject = window.open( "pop.html", "windowName", "top=500,left=500,width=450,height=100,status" ) ;
  }
  else { window.setTimeout( init , 1000 ) ; }
- function resetTimer()
-{
-counter = 0;
-console.log(counter)
-console.log("resetTimer click")
-}
+ 
+
+
 }
 
 document.addEventListener( "DOMContentLoaded" , init , false ) ;
+
+ function stay() {
+ 
+ 	
+   var winObject = window.close( "pop.html", "windowName") ;
+   /**var timer_Reset = window.setTimeout( init , 1000 ) ;*/
+
+
+       }
+       
+ 
+  /** (document.getElementById("stay").onclick){
+  var winObject = window.close( "pop.html", "windowName") ;
+ }*/
+ /**function resetTimer()
+{
+counter = 0;
+console.log(counter);
+console.log("resetTimer click");
+}*/
+/**
+document.getElementById("stay").onclick = function() {myFunction()};
+
+function myFunction() {
+    document.getElementById("stay").innerHTML = "YOU CLICKED ME!";
+}
+*/
+
 /**
 function resetTimer()
 {
@@ -33,3 +58,8 @@ console.log(counter)
 }
 document.addEventListener( "DOMContentLoaded" , init , false ) ;
 */
+/**ocument.getElementById("stay").addEventListener("click", myFunction);
+
+function myFunction() {
+    document.getElementById("stay").innerHTML = "YOU CLICKED ME!";
+}*/
