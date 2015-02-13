@@ -3,49 +3,65 @@
  */
 var counter = 0 ;
 
-function init()
-{
- var panel = document.getElementById( "panel" ) ;
- counter++ ; 
- panel.innerHTML += "<span style='background:black;color:white;margin:2px;'>"+counter+ "</span>" ;
- if ( counter >= 10 ) 
- { 
+function init() {
+	var panel = document.getElementById( "panel" ) ;
+	counter++ ; 
+	panel.innerHTML += "<span style='background:black;color:white;margin:2px;'>"+counter+ "</span>" ;
+ 	if ( counter >= 10 ) { 
   /**var left = 500 (screen.width/2)-(450/2);*/
   /**var top = 500 (screen.height/2)-(100/2);*/
- 
- var winObject = window.open( "pop.html", "windowName", "top=500,left=500,width=450,height=100,status" ) ;
+ 		var winObject = window.open( "pop.html", "windowName", "top=500,left=500,width=450,height=100,status" ) ;
+ 	}
+ 	else { window.setTimeout( init , 1000 ) ; }
  }
- else { window.setTimeout( init , 1000 ) ; }
- 
-
-
-}
-
 document.addEventListener( "DOMContentLoaded" , init , false ) ;
 
- function stay() {
+
+function stay() {	   
+	var winObject = window.close( "pop.html", "windowName") ;
+	}
+       
+function refresh() {
+ 	window.opener.location.href = "index.html"
+	}    
+       
+function exit() { 	
+ 	window.opener.location.href = "http://www.google.com"
+	}
+       
+
+$(document).ready(function() {
+	$("#accordion").accordion({ 
+		event: "click",
+		collapsible: true 
+		});
+	$("#slider").slider({
+		range: "min",
+		value: 1,
+		min: 1.0,
+		max: 2.5,
+		step: 0.1,
+		slide: function (event, ui) {
+			$( "#message" ).css ("font-size", ui.value + "em");
+			} 
+		});
+});
+
+
  
- 		
- 	   
-  	   var winObject = window.close( "pop.html", "windowName") ;
-  	   
- 	  /** window.opener.location.reload(true);*/
+/**$("#slider").slider(
+	{
+		range: "min",
+		value: 1,
+		min: 0.5,
+		max: 2.5,
+		step: 0.1,
+		slide: function (event, ui) {
+			$( "#message" ).css ("font-size", ui.value + "em");
+		} 
+	});
+*/
 
-   /**var timer_Reset = window.setTimeout( init , 1000 ) ;*/
-
-
-       }
-       
-  function refresh() {
-  	            window.opener.location.href = "index.html"
-  	                        }    
-       
-  function exit() {
-  	
-   window.opener.location.href = "http://www.google.com"
-  }
-       
- 
   /** (document.getElementById("stay").onclick){
   var winObject = window.close( "pop.html", "windowName") ;
  }*/

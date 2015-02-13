@@ -71,3 +71,9 @@ ul {
 li {
 	padding-bottom: .25em;
 }
+
+#message {
+	font-size: 1em;
+	width: 250px;
+	height: 100px;
+}

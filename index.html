@@ -17,20 +17,21 @@
     <!-- jQuery call to the accordion() method. -->
     <script type="text/javascript" src="js/assignment5.js"></script>
     <script>
-    	$(document).ready(function() {
-			$("#accordion").accordion(
-				{ 
-					event: "click",
-					collapsible: true 
-				});
-	    });
+	/**$( "#slider" ).slider({
+		min: 0,
+		max: 10,
+		step: 2,
+		value: 4
+	});
+	*/
 	</script>
 </head>
 
 <body>
     <section>
     	<div id="panel"></div> 
-        <h1>Angular JS Presentation</h1>       
+        <h1 id="message">Angular JS Presentation</h1> 
+        <div id="slider"></div>       
         <div id="accordion">
  			<h3><a href="#">What is AngularJS?</a></h3>
 			<div>
@@ -68,8 +69,8 @@
 					<li>See the following code page.</li>
 				</ol>
 			</div>
-			
-        </div>
-    </section>
+			</div>
+ 		
+ 	</section>
 </body>
 </html>
