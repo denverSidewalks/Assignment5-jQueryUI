@@ -77,3 +77,19 @@ li {
 	width: 250px;
 	height: 100px;
 }
+
+.hidden {
+	display: none;
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 450px;
+	height: 100px;
+	background-color: gray;
+	z-index: 1;
+	margin-left: -225px;
+	margin-top: -50px;
+}

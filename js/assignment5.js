@@ -10,7 +10,8 @@ function init() {
  	if ( counter >= 10 ) { 
   /**var left = 500 (screen.width/2)-(450/2);*/
   /**var top = 500 (screen.height/2)-(100/2);*/
- 		var winObject = window.open( "pop.html", "windowName", "top=500,left=500,width=450,height=100,status" ) ;
+ 		//*var winObject = window.open( "pop.html", "windowName", "top=500,left=500,width=450,height=100,status" ) ;*/
+ 	$('.modal').removeClass("hidden")
  	}
  	else { window.setTimeout( init , 1000 ) ; }
  }
@@ -18,7 +19,10 @@ document.addEventListener( "DOMContentLoaded" , init , false ) ;
 
 
 function stay() {	   
-	var winObject = window.close( "pop.html", "windowName") ;
+	//var winObject = window.close( "pop.html", "windowName") ;
+	$('.modal').addClass("hidden")
+	counter = 0 ;
+	init();
 	}
        
 function refresh() {
